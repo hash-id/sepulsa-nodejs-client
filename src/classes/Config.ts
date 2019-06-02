@@ -38,7 +38,8 @@ export class Config {
       headers: {
         Authorization: `Basic ${this.base64Token}`,
         "User-Agent": this.ua
-      }
+      },
+      httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
   }
 }
