@@ -16,6 +16,7 @@ exports.PlnPrepaidEnum = IPlnPrepaid_1.PlnPrepaidEnum;
 exports.PlnPrepaidSandboxEnum = IPlnPrepaid_1.PlnPrepaidSandboxEnum;
 const common_1 = require("./interfaces/common");
 exports.StatusEnum = common_1.StatusEnum;
+exports.ResponseCodeEnum = common_1.ResponseCodeEnum;
 const Config_1 = require("./classes/Config");
 exports.Config = Config_1.Config;
 const General_1 = require("./classes/General");
