@@ -1,4 +1,6 @@
 import axios from "axios";
+import https from "https";
+import http from "http";
 
 export class Config {
   private apiUrl: string;
@@ -26,7 +28,8 @@ export class Config {
       headers: {
         Authorization: `Basic ${this.base64Token}`,
         "User-Agent": this.ua
-      }
+      },
+      httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
   }
 

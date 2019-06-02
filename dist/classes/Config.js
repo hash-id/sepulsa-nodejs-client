@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
+const https_1 = __importDefault(require("https"));
 class Config {
     get targetUrl() {
         return this.apiUrl;
@@ -23,7 +24,8 @@ class Config {
             headers: {
                 Authorization: `Basic ${this.base64Token}`,
                 "User-Agent": this.ua
-            }
+            },
+            httpsAgent: new https_1.default.Agent({ ecdhCurve: "auto" })
         });
     }
     postRequest(path, data) {
