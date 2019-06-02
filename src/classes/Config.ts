@@ -15,7 +15,7 @@ export class Config {
 
   constructor(url: string, user: string, password: string, userAgent?: string) {
     this.apiUrl = url;
-    this.ua = userAgent || "UserClient";
+    this.ua = userAgent || user;
     const authStr = new Buffer(`${user}:${password}`);
     this.base64Token = authStr.toString("base64");
   }
