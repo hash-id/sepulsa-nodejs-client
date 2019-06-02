@@ -5,7 +5,6 @@ import {
   IPlnPrepaidInquiryResponse,
   IPlnPrepaidResponse
 } from "../interfaces/IPlnPrepaid";
-import { IError } from "../interfaces/common";
 
 export class PlnPrepaid {
   cfg: Config;
@@ -19,7 +18,7 @@ export class PlnPrepaid {
       const response = await this.cfg.postRequest("/inquire/electricity.json", inquiryData);
       return <IPlnPrepaidInquiryResponse>response.data;
     } catch (e) {
-      return <IError>{
+      return <IPlnPrepaidInquiryResponse>{
         error: e.message || e
       };
     }
@@ -30,7 +29,7 @@ export class PlnPrepaid {
       const response = await this.cfg.postRequest("/transaction/electricity.json", purchaseData);
       return <IPlnPrepaidResponse>response.data;
     } catch (e) {
-      return <IError>{
+      return <IPlnPrepaidInquiryResponse>{
         error: e.message || e
       };
     }
@@ -41,7 +40,7 @@ export class PlnPrepaid {
       const response = await this.cfg.getRequest(`/transaction/electricity/${id}.json`);
       return <IPlnPrepaidResponse>response.data;
     } catch (e) {
-      return <IError>{
+      return <IPlnPrepaidInquiryResponse>{
         error: e.message || e
       };
     }

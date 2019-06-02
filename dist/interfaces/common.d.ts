@@ -19,9 +19,6 @@ export interface IBalanceResponse {
     balance: number | null;
     error?: string;
 }
-export interface IError {
-    error: string | object;
-}
 export declare enum StatusEnum {
     "success" = "success",
     "failed" = "failed",
