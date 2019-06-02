@@ -25,3 +25,10 @@ export interface IBalanceResponse {
 export interface IError {
   error: string | object;
 }
+
+export enum StatusEnum {
+  "success" = "success",
+  "failed" = "failed",
+  "pending" = "pending",
+  "cancel" = "cancel"
+}

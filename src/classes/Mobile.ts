@@ -1,6 +1,5 @@
 import { Config } from "./Config";
 import { IMobileCreate, IMobileResponse } from "../interfaces/IMobile";
-import { IError } from "../interfaces/common";
 
 export class Mobile {
   private cfg: Config;

@@ -1,7 +1,7 @@
-import { IProductId } from "./common";
+import { IProductId, StatusEnum } from "./common";
 
 export interface IMobileCreate {
-  customer_number: string;
+  customer_number: string | MobileSandboxEnum;
   product_id: MobileReloadEnum | MobileDataEnum;
   order_id: string;
 }
@@ -14,7 +14,7 @@ export interface IMobileResponse {
   customer_number: string;
   order_id: string;
   price: string;
-  status: string;
+  status: StatusEnum;
   response_code: string;
   serial_number: string;
   amount: string;
@@ -22,7 +22,16 @@ export interface IMobileResponse {
   error?: string /* augmented error information */;
 }
 
+export enum MobileSandboxEnum {
+  "081234000001" = "081234000001",
+  "081234000011" = "081234000011",
+  "081234000002" = "081234000002",
+  "081234000003" = "081234000003"
+}
+
 export enum MobileReloadEnum {
+  "sandbox9" = 9,
+  "sandbox11" = 11,
   "axis-5k" = 14,
   "axis-10k" = 55,
   "axis-15k" = 223,

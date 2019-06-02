@@ -1,6 +1,6 @@
-import { IProductId } from "./common";
+import { IProductId, StatusEnum } from "./common";
 export interface IPlnPostpaidInquiry {
-    customer_number: string;
+    customer_number: string | PlnPostpaidSandboxEnum;
     product_id: PlnPostpaidEnum;
 }
 export interface IPlnPostpaidInquiryResponse {
@@ -55,7 +55,7 @@ export interface IPlnPostpaidResponse {
     customer_number: string;
     order_id: string;
     price: string;
-    status: string;
+    status: StatusEnum;
     response_code: string;
     serial_number: string;
     amount: string;
@@ -95,4 +95,9 @@ export interface IPlnPostpaidData {
 export declare enum PlnPostpaidEnum {
     "live" = 189,
     "sandbox" = 80
+}
+export declare enum PlnPostpaidSandboxEnum {
+    "sbox-512345600000" = "512345600000",
+    "sbox-512345610000" = "512345610000",
+    "sbox-512345600003" = "512345600003"
 }

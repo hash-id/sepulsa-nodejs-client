@@ -1,6 +1,6 @@
-import { IProductId } from "./common";
+import { IProductId, StatusEnum } from "./common";
 export interface IPlnPrepaidInquiry {
-    customer_number: string;
+    customer_number: string | PlnPrepaidSandboxEnum;
     product_id: PlnPrepaidEnum;
 }
 export interface IPlnPrepaidInquiryResponse {
@@ -32,7 +32,7 @@ export interface IPlnPrepaidInquiryResponse {
 export interface IPlnPrepaidCreate {
     customer_number: string;
     product_id: PlnPrepaidEnum;
-    meter_number: string;
+    meter_number: string | PlnPrepaidSandboxEnum;
     order_id: string;
 }
 export interface IPlnPrepaidResponse {
@@ -43,7 +43,7 @@ export interface IPlnPrepaidResponse {
     customer_number: string;
     order_id: string;
     price: string;
-    status: string;
+    status: StatusEnum;
     response_code: string;
     serial_number: string;
     amount: string;
@@ -94,5 +94,10 @@ export declare enum PlnPrepaidEnum {
     "200k" = "32",
     "500k" = "33",
     "1000k" = "34",
-    "test" = "25"
+    "sandbox" = "25"
+}
+export declare enum PlnPrepaidSandboxEnum {
+    "01428800700" = "01428800700",
+    "01428800701" = "01428800701",
+    "01428800100" = "01428800100"
 }

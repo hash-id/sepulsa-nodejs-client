@@ -1,7 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var MobileSandboxEnum;
+(function (MobileSandboxEnum) {
+    MobileSandboxEnum["081234000001"] = "081234000001";
+    MobileSandboxEnum["081234000011"] = "081234000011";
+    MobileSandboxEnum["081234000002"] = "081234000002";
+    MobileSandboxEnum["081234000003"] = "081234000003";
+})(MobileSandboxEnum = exports.MobileSandboxEnum || (exports.MobileSandboxEnum = {}));
 var MobileReloadEnum;
 (function (MobileReloadEnum) {
+    MobileReloadEnum[MobileReloadEnum["sandbox9"] = 9] = "sandbox9";
+    MobileReloadEnum[MobileReloadEnum["sandbox11"] = 11] = "sandbox11";
     MobileReloadEnum[MobileReloadEnum["axis-5k"] = 14] = "axis-5k";
     MobileReloadEnum[MobileReloadEnum["axis-10k"] = 55] = "axis-10k";
     MobileReloadEnum[MobileReloadEnum["axis-15k"] = 223] = "axis-15k";
