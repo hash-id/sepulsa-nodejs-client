@@ -9,7 +9,7 @@ const USER = process.env.ALTERRA_USER;
 const PASS = process.env.ALTERRA_PASS;
 const URL = process.env.ALTERRA_URL;
 
-describe("Config testing", function() {
+describe("Config Class test", function() {
   describe("Common", function() {
     before("Create config instance", function() {
       this.instance = new Config(URL, USER, PASS);
