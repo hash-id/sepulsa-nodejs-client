@@ -12,7 +12,7 @@ var PlnPrepaidEnum;
 })(PlnPrepaidEnum = exports.PlnPrepaidEnum || (exports.PlnPrepaidEnum = {}));
 var PlnPrepaidSandboxEnum;
 (function (PlnPrepaidSandboxEnum) {
-    PlnPrepaidSandboxEnum["01428800700"] = "01428800700";
-    PlnPrepaidSandboxEnum["01428800701"] = "01428800701";
-    PlnPrepaidSandboxEnum["01428800100"] = "01428800100";
+    PlnPrepaidSandboxEnum["sbox-01428800700"] = "01428800700";
+    PlnPrepaidSandboxEnum["sbox-01428800701"] = "01428800701";
+    PlnPrepaidSandboxEnum["sbox-01428800100"] = "01428800100";
 })(PlnPrepaidSandboxEnum = exports.PlnPrepaidSandboxEnum || (exports.PlnPrepaidSandboxEnum = {}));

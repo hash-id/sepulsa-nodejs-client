@@ -6,6 +6,7 @@ export class Config {
   private apiUrl: string;
   private ua: string | undefined;
   private base64Token: string;
+  private verbose: boolean = false;
 
   get targetUrl() {
     return this.apiUrl;
@@ -13,6 +14,10 @@ export class Config {
 
   get authToken() {
     return `Basic ${this.base64Token}`;
+  }
+
+  set debug(mode: boolean) {
+    this.verbose = mode || false;
   }
 
   constructor(url: string, user: string, password: string, userAgent?: string) {
@@ -23,7 +28,7 @@ export class Config {
   }
 
   getRequest(path: string, parameters?: object) {
-    return axios.get(`${this.apiUrl}${path}`, {
+    const requestInstance = axios.get(`${this.apiUrl}${path}`, {
       params: parameters,
       headers: {
         Authorization: `Basic ${this.base64Token}`,
@@ -31,15 +36,29 @@ export class Config {
       },
       httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
+    if (this.verbose) {
+      return requestInstance.catch(e => {
+        console.error(e);
+        throw e;
+      });
+    }
+    return requestInstance;
   }
 
   postRequest(path: string, data?: object) {
-    return axios.post(`${this.apiUrl}${path}`, data, {
+    const requestInstance = axios.post(`${this.apiUrl}${path}`, data, {
       headers: {
         Authorization: `Basic ${this.base64Token}`,
         "User-Agent": this.ua
       },
       httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
+    if (this.verbose) {
+      return requestInstance.catch(e => {
+        console.error(e);
+        throw e;
+      });
+    }
+    return requestInstance;
   }
 }

@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var MobileSandboxEnum;
 (function (MobileSandboxEnum) {
-    MobileSandboxEnum["081234000001"] = "081234000001";
-    MobileSandboxEnum["081234000011"] = "081234000011";
-    MobileSandboxEnum["081234000002"] = "081234000002";
-    MobileSandboxEnum["081234000003"] = "081234000003";
+    MobileSandboxEnum["sbox-081234000001"] = "081234000001";
+    MobileSandboxEnum["sbox-081234000011"] = "081234000011";
+    MobileSandboxEnum["sbox-081234000002"] = "081234000002";
+    MobileSandboxEnum["sbox-081234000003"] = "081234000003";
 })(MobileSandboxEnum = exports.MobileSandboxEnum || (exports.MobileSandboxEnum = {}));
 var MobileReloadEnum;
 (function (MobileReloadEnum) {

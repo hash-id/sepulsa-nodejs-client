@@ -97,7 +97,7 @@ export declare enum PlnPrepaidEnum {
     "sandbox" = "25"
 }
 export declare enum PlnPrepaidSandboxEnum {
-    "01428800700" = "01428800700",
-    "01428800701" = "01428800701",
-    "01428800100" = "01428800100"
+    "sbox-01428800700" = "01428800700",
+    "sbox-01428800701" = "01428800701",
+    "sbox-01428800100" = "01428800100"
 }

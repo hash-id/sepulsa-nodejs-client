@@ -20,10 +20,10 @@ export interface IMobileResponse {
     error?: string;
 }
 export declare enum MobileSandboxEnum {
-    "081234000001" = "081234000001",
-    "081234000011" = "081234000011",
-    "081234000002" = "081234000002",
-    "081234000003" = "081234000003"
+    "sbox-081234000001" = "081234000001",
+    "sbox-081234000011" = "081234000011",
+    "sbox-081234000002" = "081234000002",
+    "sbox-081234000003" = "081234000003"
 }
 export declare enum MobileReloadEnum {
     "sandbox9" = 9,
