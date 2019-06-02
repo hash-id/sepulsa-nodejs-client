@@ -33,7 +33,7 @@ describe("Mobile Class test", function() {
         product_id: MobileReloadEnum.sandbox9,
         order_id: "PURCHASE-SUCCESS-01"
       });
-      console.log(result);
+      // console.log(result);
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.oneOf([StatusEnum.success, StatusEnum.pending]);
       expect(result.type).to.be.eq("mobile");
@@ -42,7 +42,7 @@ describe("Mobile Class test", function() {
     it("should return success transaction detail", async function() {
       const instance = new Mobile(this.cfg);
       const result = await instance.queryTransactionDetail("PURCHASE-SUCCESS-01");
-      console.log(result);
+      // console.log(result);
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.eq(StatusEnum.success);
       expect(result.type).to.be.eq("mobile");
@@ -57,7 +57,7 @@ describe("Mobile Class test", function() {
         product_id: MobileReloadEnum.sandbox9,
         order_id: "PURCHASE-FAILED-01"
       });
-      console.log(result);
+      // console.log(result);
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.oneOf([StatusEnum.failed, StatusEnum.pending]);
       expect(result.type).to.be.eq("mobile");
@@ -66,7 +66,7 @@ describe("Mobile Class test", function() {
     it("should return failed transaction detail", async function() {
       const instance = new Mobile(this.cfg);
       const result = await instance.queryTransactionDetail("PURCHASE-FAILED-01");
-      console.log(result);
+      // console.log(result);
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.eq(StatusEnum.failed);
       expect(result.type).to.be.eq("mobile");
