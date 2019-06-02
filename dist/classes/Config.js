@@ -5,15 +5,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 class Config {
-    // get targetUrl() {
-    //   return this.apiUrl;
-    // }
-    // get authToken() {
-    //   return `Basic ${this.base64Token}`;
-    // }
+    get targetUrl() {
+        return this.apiUrl;
+    }
+    get authToken() {
+        return `Basic ${this.base64Token}`;
+    }
     constructor(url, user, password, userAgent) {
         this.apiUrl = url;
-        this.ua = userAgent || "UserClient";
+        this.ua = userAgent || user;
         const authStr = new Buffer(`${user}:${password}`);
         this.base64Token = authStr.toString("base64");
     }
