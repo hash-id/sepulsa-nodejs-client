@@ -30,17 +30,17 @@ export enum StatusEnum {
 }
 
 export enum ResponseCodeEnum {
-  "rc00" = "Success",
-  "rc10" = "Pending",
-  "rc20" = "Wrong number/ number blocked/ number expired",
-  "rc21" = "Product Issue",
-  "rc22" = "Duplicate Transaction",
-  "rc23" = "Connection Timeout",
-  "rc24" = "Provider Cut Off",
-  "rc25" = "KWH is Overlimit",
-  "rc26" = "Payment Overlimit",
-  "rc50" = "Bill Already Paid/ Not Available",
-  "rc51" = "Invalid Inquiry Amount or No inquiry",
-  "rc98" = "Order Canceled by Ops",
-  "rc99" = "General Error"
+  "Success" = "00",
+  "Pending" = "10",
+  "Wrong number/ number blocked/ number expired" = "20",
+  "Product Issue" = "21",
+  "Duplicate Transaction" = "22",
+  "Connection Timeout" = "23",
+  "Provider Cut Off" = "24",
+  "KWH is Overlimit" = "25",
+  "Payment Overlimit" = "26",
+  "Bill Already Paid/ Not Available" = "50",
+  "Invalid Inquiry Amount or No inquiry" = "51",
+  "Order Canceled by Ops" = "98",
+  "General Error" = "99"
 }
