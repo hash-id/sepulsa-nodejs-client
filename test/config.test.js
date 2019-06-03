@@ -4,6 +4,9 @@ const dotEnv = require("dotenv");
 const nock = require("nock");
 const { Config } = require("../dist/index");
 
+/**
+ * obtain parameter from .env
+ */
 dotEnv.config();
 const USER = process.env.ALTERRA_USER;
 const PASS = process.env.ALTERRA_PASS;
@@ -12,6 +15,7 @@ const URL = process.env.ALTERRA_URL;
 describe("Config Class test", function() {
   describe("Common", function() {
     before("Create config instance", function() {
+      // setup config instance
       this.instance = new Config(URL, USER, PASS);
     });
 
