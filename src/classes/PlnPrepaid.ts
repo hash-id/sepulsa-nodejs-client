@@ -29,7 +29,7 @@ export class PlnPrepaid {
       const response = await this.cfg.postRequest("/transaction/electricity.json", purchaseData);
       return <IPlnPrepaidResponse>response.data;
     } catch (e) {
-      return <IPlnPrepaidInquiryResponse>{
+      return <IPlnPrepaidResponse>{
         error: e.message || e
       };
     }
@@ -37,10 +37,10 @@ export class PlnPrepaid {
 
   async queryTransactionDetail(id: string) {
     try {
-      const response = await this.cfg.getRequest(`/transaction/electricity/${id}.json`);
+      const response = await this.cfg.getRequest(`/transaction/${id}.json`);
       return <IPlnPrepaidResponse>response.data;
     } catch (e) {
-      return <IPlnPrepaidInquiryResponse>{
+      return <IPlnPrepaidResponse>{
         error: e.message || e
       };
     }

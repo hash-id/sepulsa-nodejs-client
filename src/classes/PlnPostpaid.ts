@@ -37,7 +37,7 @@ export class PlnPostpaid {
 
   async queryTransactionDetail(id: string) {
     try {
-      const response = await this.cfg.getRequest(`/transaction/electricity_postpaid/${id}.json`);
+      const response = await this.cfg.getRequest(`/transaction/${id}.json`);
       return <IPlnPostpaidResponse>response.data;
     } catch (e) {
       return <IPlnPostpaidResponse>{

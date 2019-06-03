@@ -41,7 +41,7 @@ class PlnPrepaid {
     queryTransactionDetail(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield this.cfg.getRequest(`/transaction/electricity/${id}.json`);
+                const response = yield this.cfg.getRequest(`/transaction/${id}.json`);
                 return response.data;
             }
             catch (e) {

@@ -29,7 +29,7 @@ class Mobile {
     queryTransactionDetail(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield this.cfg.getRequest(`/transaction/mobile/${id}.json`);
+                const response = yield this.cfg.getRequest(`/transaction/${id}.json`);
                 const respData = response.data;
                 return respData;
             }

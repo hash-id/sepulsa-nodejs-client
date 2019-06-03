@@ -22,7 +22,7 @@ export class Mobile {
 
   async queryTransactionDetail(id: string) {
     try {
-      const response = await this.cfg.getRequest(`/transaction/mobile/${id}.json`);
+      const response = await this.cfg.getRequest(`/transaction/${id}.json`);
       const respData = response.data as IMobileResponse;
       return respData;
     } catch (e) {
