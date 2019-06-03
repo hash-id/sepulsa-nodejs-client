@@ -9,6 +9,7 @@ const PASS = process.env.ALTERRA_PASS;
 const URL = process.env.ALTERRA_URL;
 
 describe("General Class test", function() {
+  this.timeout(5000);
   before("Setup instance", function() {
     const cfg = new Config(URL, USER, PASS);
     this.instance = new General(cfg);
