@@ -32,7 +32,12 @@ class Config {
             httpsAgent: new https_1.default.Agent({ ecdhCurve: "auto" })
         });
         if (this.verbose) {
-            return requestInstance.catch(e => {
+            return requestInstance
+                .then(result => {
+                console.log(result);
+                return result;
+            })
+                .catch(e => {
                 console.error(e);
                 throw e;
             });
@@ -48,7 +53,12 @@ class Config {
             httpsAgent: new https_1.default.Agent({ ecdhCurve: "auto" })
         });
         if (this.verbose) {
-            return requestInstance.catch(e => {
+            return requestInstance
+                .then(result => {
+                console.log(result);
+                return result;
+            })
+                .catch(e => {
                 console.error(e);
                 throw e;
             });

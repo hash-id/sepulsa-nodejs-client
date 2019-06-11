@@ -37,10 +37,15 @@ export class Config {
       httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
     if (this.verbose) {
-      return requestInstance.catch(e => {
-        console.error(e);
-        throw e;
-      });
+      return requestInstance
+        .then(result => {
+          console.log(result);
+          return result;
+        })
+        .catch(e => {
+          console.error(e);
+          throw e;
+        });
     }
     return requestInstance;
   }
@@ -54,10 +59,15 @@ export class Config {
       httpsAgent: new https.Agent({ ecdhCurve: "auto" })
     });
     if (this.verbose) {
-      return requestInstance.catch(e => {
-        console.error(e);
-        throw e;
-      });
+      return requestInstance
+        .then(result => {
+          console.log(result);
+          return result;
+        })
+        .catch(e => {
+          console.error(e);
+          throw e;
+        });
     }
     return requestInstance;
   }
