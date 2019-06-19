@@ -27,4 +27,29 @@ describe("General Class test", function() {
     expect(result).to.not.have.property("error");
     expect(result).to.have.property("balance");
   });
+
+  it("should have getProduct method ", async function() {
+    expect(this.instance).to.exist;
+    expect(this.instance).to.be.an.instanceOf(General);
+    expect(this.instance.getProduct).to.exist;
+    expect(this.instance.getProduct).to.be.a("function");
+  });
+
+  it("should return mobile product", async function() {
+    const result = await this.instance.getProduct("mobile");
+    // console.log(result);
+    expect(result).to.not.have.property("error");
+    expect(result).to.have.property("data");
+    expect(result.data[0]).to.have.property("type");
+    expect(result.data[0].type).to.be.eq("mobile");
+  });
+
+  it("should return electricity data", async function() {
+    const result = await this.instance.getProduct("electricity");
+    // console.log(result);
+    expect(result).to.not.have.property("error");
+    expect(result).to.have.property("data");
+    expect(result.data[0]).to.have.property("type");
+    expect(result.data[0].type).to.be.eq("electricity");
+  });
 });

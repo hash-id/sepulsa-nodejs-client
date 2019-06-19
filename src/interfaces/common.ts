@@ -22,6 +22,11 @@ export interface IBalanceResponse {
   error?: string;
 }
 
+export interface IProductListResponse {
+  data: Array<IProductId>;
+  error?: string;
+}
+
 export enum StatusEnum {
   "success" = "success",
   "failed" = "failed",
@@ -43,4 +48,15 @@ export enum ResponseCodeEnum {
   "Invalid Inquiry Amount or No inquiry" = "51",
   "Order Canceled by Ops" = "98",
   "General Error" = "99"
+}
+
+export enum ProductTypeEnum {
+  "mobile" = "mobile",
+  "electricity" = "electricity",
+  "electricity_postpaid" = "electricity_postpaid",
+  "bpjs_kesehatan" = "bpjs_kesehatan",
+  "game" = "game",
+  "multi" = "multi",
+  "telkom_postpaid" = "telkom_postpaid",
+  "pdam" = "pdam"
 }

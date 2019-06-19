@@ -23,3 +23,14 @@ var ResponseCodeEnum;
     ResponseCodeEnum["Order Canceled by Ops"] = "98";
     ResponseCodeEnum["General Error"] = "99";
 })(ResponseCodeEnum = exports.ResponseCodeEnum || (exports.ResponseCodeEnum = {}));
+var ProductTypeEnum;
+(function (ProductTypeEnum) {
+    ProductTypeEnum["mobile"] = "mobile";
+    ProductTypeEnum["electricity"] = "electricity";
+    ProductTypeEnum["electricity_postpaid"] = "electricity_postpaid";
+    ProductTypeEnum["bpjs_kesehatan"] = "bpjs_kesehatan";
+    ProductTypeEnum["game"] = "game";
+    ProductTypeEnum["multi"] = "multi";
+    ProductTypeEnum["telkom_postpaid"] = "telkom_postpaid";
+    ProductTypeEnum["pdam"] = "pdam";
+})(ProductTypeEnum = exports.ProductTypeEnum || (exports.ProductTypeEnum = {}));

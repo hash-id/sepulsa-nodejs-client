@@ -28,5 +28,27 @@ class General {
             }
         });
     }
+    getProduct(productType) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const reqParams = {
+                    type: productType
+                };
+                if (!productType)
+                    delete reqParams.type;
+                ///
+                const response = yield this.cfg.getRequest("/product.json", reqParams);
+                return {
+                    data: response.data.list
+                };
+            }
+            catch (e) {
+                return {
+                    data: [],
+                    error: e
+                };
+            }
+        });
+    }
 }
 exports.General = General;
