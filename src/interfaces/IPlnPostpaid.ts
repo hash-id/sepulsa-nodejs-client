@@ -107,5 +107,6 @@ export enum PlnPostpaidEnum {
 export enum PlnPostpaidSandboxEnum {
   "sbox-512345600000" = "512345600000",
   "sbox-512345610000" = "512345610000",
-  "sbox-512345600003" = "512345600003"
+  "sbox-512345600003" = "512345600003",
+  "sbox-512345620000" = "512345620000"
 }

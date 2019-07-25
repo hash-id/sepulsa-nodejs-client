@@ -33,6 +33,7 @@ describe("Mobile Class test", function() {
    * Positive case
    */
   describe("Positive case", function() {
+    this.timeout(7000);
     before(function() {
       this.succesOrderId = `mbok-${moment()
         .valueOf()
@@ -69,6 +70,7 @@ describe("Mobile Class test", function() {
    * Negative case
    */
   describe("Negative case", function() {
+    this.timeout(7000);
     before(function() {
       this.failedOrderId = `mbfail-${moment()
         .valueOf()
@@ -85,17 +87,17 @@ describe("Mobile Class test", function() {
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.eq(StatusEnum.pending);
       expect(result.type).to.be.eq("mobile");
-      // console.log(result.transaction_id);
+      console.log(result.transaction_id);
       this.trxId = result.transaction_id; /// grab the transaction_id to query transaction details
     });
 
     it("should return failed on transaction detail due to invalid number", async function() {
       const instance = new Mobile(this.cfg);
       const result = await instance.queryTransactionDetail(this.trxId);
-      // console.log(result);
+      console.log(result);
       expect(result).to.not.have.property("error");
       expect(result.status).to.be.oneOf([StatusEnum.failed]);
-      expect(result.response_code).to.be.eq(ResponseCodeEnum["General Error"]);
+      expect(result.response_code).to.be.eq(ResponseCodeEnum["Wrong number/ number blocked/ number expired"]);
       expect(result.type).to.be.eq("mobile");
     });
 
