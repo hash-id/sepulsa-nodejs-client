@@ -42,7 +42,8 @@ export declare enum ResponseCodeEnum {
     "Bill Already Paid/ Not Available" = "50",
     "Invalid Inquiry Amount or No inquiry" = "51",
     "Order Canceled by Ops" = "98",
-    "General Error" = "99"
+    "General Error" = "99",
+    "failed" = "99"
 }
 export declare enum ProductTypeEnum {
     "mobile" = "mobile",

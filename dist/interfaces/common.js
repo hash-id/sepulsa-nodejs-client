@@ -22,6 +22,7 @@ var ResponseCodeEnum;
     ResponseCodeEnum["Invalid Inquiry Amount or No inquiry"] = "51";
     ResponseCodeEnum["Order Canceled by Ops"] = "98";
     ResponseCodeEnum["General Error"] = "99";
+    ResponseCodeEnum["failed"] = "99";
 })(ResponseCodeEnum = exports.ResponseCodeEnum || (exports.ResponseCodeEnum = {}));
 var ProductTypeEnum;
 (function (ProductTypeEnum) {

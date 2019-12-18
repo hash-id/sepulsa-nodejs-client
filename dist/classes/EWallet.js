@@ -9,14 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-class Game {
+class EWallet {
     constructor(config) {
         this.cfg = config;
     }
     createTransaction(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield this.cfg.postRequest("/transaction/game.json", data);
+                const response = yield this.cfg.postRequest("/transaction/ewallet.json", data);
                 const respData = response.data;
                 return respData;
             }
@@ -30,7 +30,7 @@ class Game {
     queryTransactionDetail(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const response = yield this.cfg.getRequest(`/transaction/${id}.json`);
+                const response = yield this.cfg.getRequest(`/transaction/ewallet/${id}.json`);
                 const respData = response.data;
                 return respData;
             }
@@ -42,4 +42,4 @@ class Game {
         });
     }
 }
-exports.Game = Game;
+exports.EWallet = EWallet;
