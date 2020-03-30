@@ -5,6 +5,7 @@
 
 import { MobileReloadEnum, MobileDataEnum, MobileSandboxEnum } from "./interfaces/IMobile";
 import { EWalletSandboxEnum } from "./interfaces/IEWallet";
+import { DonationSandboxEnum } from "./interfaces/IDonation";
 import { PlnPostpaidEnum, PlnPostpaidSandboxEnum } from "./interfaces/IPlnPostpaid";
 import { PlnPrepaidEnum, PlnPrepaidSandboxEnum } from "./interfaces/IPlnPrepaid";
 import { GameSandboxEnum, GameSandboxCustomerEnum } from "./interfaces/IGame";
@@ -19,6 +20,7 @@ import { PlnPrepaid } from "./classes/PlnPrepaid";
 import { PlnPostpaid } from "./classes/PlnPostpaid";
 import { BpjsKesehatan } from "./classes/BpjsKes";
 import { EWallet } from "./classes/EWallet";
+import { Donation } from "./classes/Donation";
 
 export {
 	Config,
@@ -29,6 +31,7 @@ export {
 	PlnPostpaid,
 	BpjsKesehatan,
 	EWallet,
+	Donation,
 	//
 	MobileReloadEnum,
 	MobileDataEnum,
@@ -41,6 +44,7 @@ export {
 	GameSandboxCustomerEnum,
 	BpjsKesSandboxEnum,
 	EWalletSandboxEnum,
+	DonationSandboxEnum,
 	//
 	StatusEnum,
 	ResponseCodeEnum,
