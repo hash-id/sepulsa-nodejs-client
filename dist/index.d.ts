@@ -1,5 +1,6 @@
 import { MobileReloadEnum, MobileDataEnum, MobileSandboxEnum } from "./interfaces/IMobile";
 import { EWalletSandboxEnum } from "./interfaces/IEWallet";
+import { DonationSandboxEnum } from "./interfaces/IDonation";
 import { PlnPostpaidEnum, PlnPostpaidSandboxEnum } from "./interfaces/IPlnPostpaid";
 import { PlnPrepaidEnum, PlnPrepaidSandboxEnum } from "./interfaces/IPlnPrepaid";
 import { GameSandboxEnum, GameSandboxCustomerEnum } from "./interfaces/IGame";
@@ -13,4 +14,5 @@ import { PlnPrepaid } from "./classes/PlnPrepaid";
 import { PlnPostpaid } from "./classes/PlnPostpaid";
 import { BpjsKesehatan } from "./classes/BpjsKes";
 import { EWallet } from "./classes/EWallet";
-export { Config, General, Mobile, Game, PlnPrepaid, PlnPostpaid, BpjsKesehatan, EWallet, MobileReloadEnum, MobileDataEnum, PlnPostpaidEnum, PlnPrepaidEnum, MobileSandboxEnum, PlnPostpaidSandboxEnum, PlnPrepaidSandboxEnum, GameSandboxEnum, GameSandboxCustomerEnum, BpjsKesSandboxEnum, EWalletSandboxEnum, StatusEnum, ResponseCodeEnum, ProductTypeEnum, IProductListResponse };
+import { Donation } from "./classes/Donation";
+export { Config, General, Mobile, Game, PlnPrepaid, PlnPostpaid, BpjsKesehatan, EWallet, Donation, MobileReloadEnum, MobileDataEnum, PlnPostpaidEnum, PlnPrepaidEnum, MobileSandboxEnum, PlnPostpaidSandboxEnum, PlnPrepaidSandboxEnum, GameSandboxEnum, GameSandboxCustomerEnum, BpjsKesSandboxEnum, EWalletSandboxEnum, DonationSandboxEnum, StatusEnum, ResponseCodeEnum, ProductTypeEnum, IProductListResponse };
