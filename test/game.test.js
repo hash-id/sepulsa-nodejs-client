@@ -102,7 +102,7 @@ describe("Game Class test", function() {
 			console.log(result, "transDetail");
 			expect(result).to.not.have.property("error");
 			expect(result.status).to.be.oneOf([ StatusEnum.failed ]);
-			expect(result.response_code).to.be.eq(ResponseCodeEnum["Order Canceled by Ops"]);
+			expect(result.response_code).to.be.eq(ResponseCodeEnum["failed"]);
 			expect(result.type).to.be.eq("game");
 		});
 	});
