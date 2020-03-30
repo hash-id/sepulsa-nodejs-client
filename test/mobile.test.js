@@ -93,7 +93,7 @@ describe("Mobile Class test", function() {
 			console.log(result);
 			expect(result).to.not.have.property("error");
 			expect(result.status).to.be.oneOf([ StatusEnum.failed ]);
-			expect(result.response_code).to.be.eq(ResponseCodeEnum["failed"]);
+			expect(result.response_code).to.be.eq(ResponseCodeEnum["Wrong number/ number blocked/ number expired"]);
 			expect(result.type).to.be.eq("mobile");
 		});
 
