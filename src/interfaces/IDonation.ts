@@ -6,6 +6,7 @@ export interface IDonationCreate {
 	email?: string;
 	amount: number;
 	product_id: string | "196";
+	order_id?: string;
 }
 
 export interface IDonationResponse {
