@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BpjsKesSandboxEnum = void 0;
 var BpjsKesSandboxEnum;
 (function (BpjsKesSandboxEnum) {
     BpjsKesSandboxEnum["sbox-71800"] = "0000001430071800";

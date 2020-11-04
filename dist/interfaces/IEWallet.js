@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EWalletSandboxEnum = void 0;
 var EWalletSandboxEnum;
 (function (EWalletSandboxEnum) {
     EWalletSandboxEnum["sbox-081298700001"] = "081298700001";
