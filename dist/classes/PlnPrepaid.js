@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlnPrepaid = void 0;
 class PlnPrepaid {
     constructor(config) {
         this.cfg = config;

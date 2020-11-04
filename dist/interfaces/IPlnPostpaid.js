@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlnPostpaidSandboxEnum = exports.PlnPostpaidEnum = void 0;
 var PlnPostpaidEnum;
 (function (PlnPostpaidEnum) {
     PlnPostpaidEnum[PlnPostpaidEnum["live"] = 189] = "live";

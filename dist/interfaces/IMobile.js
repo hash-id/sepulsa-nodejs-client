@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MobileDataEnum = exports.MobileReloadEnum = exports.MobileSandboxEnum = void 0;
 var MobileSandboxEnum;
 (function (MobileSandboxEnum) {
     MobileSandboxEnum["sbox-081234000001"] = "081234000001";

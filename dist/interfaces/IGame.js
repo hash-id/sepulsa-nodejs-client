@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GameSandboxCustomerEnum = exports.GameSandboxEnum = void 0;
 var GameSandboxEnum;
 (function (GameSandboxEnum) {
     GameSandboxEnum[GameSandboxEnum["sandbox"] = 44] = "sandbox";
